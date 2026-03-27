@@ -8,5 +8,22 @@
     "description": "zegging's skills marketplace — a curated collection of Claude skills",
     "version": "1.0.0"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "fastapi-project-steward",
+      "source": "./skills/fastapi-project-steward",
+      "description": "Guide FastAPI project structure, dependency and service layering, async boundaries, schema design, testing, and maintainable backend architecture work.",
+      "version": "1.0.0",
+      "author": {
+        "name": "zegging"
+      },
+      "keywords": [
+        "fastapi",
+        "backend",
+        "architecture",
+        "python",
+        "api"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,23 @@
+{
+  "skill_name": "fastapi-project-steward",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我准备新开一个 FastAPI 后端，未来会有 auth、users、billing、notifications 几个模块。请先帮我设计目录结构、分层职责，以及每个模块最少应该有哪些文件。",
+      "expected_output": "Gives a module-oriented project structure, explains route/dependency/service/schema boundaries, and avoids recommending a flat routers/models/crud-only layout.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我有个 FastAPI 接口是 async def，但里面直接调了一个同步的第三方存储 SDK 上传文件，高峰期会卡住别的请求。帮我分析问题并给一个合理改法。",
+      "expected_output": "Explains blocking I/O inside async handlers, recommends threadpool only for sync I/O, and distinguishes this from CPU-bound workloads.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "现有项目里很多路由都重复校验 post_id 是否存在、用户是否是资源 owner、当前用户是否激活。请帮我给出一个 FastAPI 风格的重构方案。",
+      "expected_output": "Proposes reusable chained dependencies, mentions request-scope caching benefits, and keeps handlers thinner after refactor.",
+      "files": []
+    }
+  ]
+}
