@@ -1,60 +1,36 @@
 # zegging-skills
 
-zegging's skills marketplace — a curated collection of Claude skills for code review, architecture analysis, and engineering best practices.
+A curated marketplace of reusable Claude skills for engineering workflows, code quality, architecture guidance, and domain-specific delivery.
 
-## What is a Skill?
+## Repository Layout
 
-A **skill** is a markdown file (`SKILL.md`) that gives Claude a structured set of instructions, checklists, and guidelines for a specific domain. Skills are activated automatically when relevant topics arise in conversation.
-
-## Skill Template
-
-Use [`skills/template/SKILL.md`](skills/template/SKILL.md) as a starting point for any new skill. Copy the directory, rename it, and fill in the placeholders.
-
-### Directory Structure
-
-```
+```text
+.claude-plugin/
+  marketplace.json
 skills/
-└── your-skill-name/
-    └── SKILL.md
+  <skill-name>/
+    SKILL.md
+README.md
 ```
 
-### SKILL.md Frontmatter
+## How This Repo Works
 
-Every skill begins with YAML frontmatter:
+- Each skill lives under `skills/<skill-name>/`.
+- Each skill is defined by a `SKILL.md` file with frontmatter and operating instructions.
+- The marketplace manifest lives in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json).
 
-```yaml
----
-name: your-skill-name          # Unique identifier (kebab-case)
-description: ...               # When and why to activate this skill
-disable-model-invocation: false # Set true to suppress LLM invocation
----
-```
+## Contributing
 
-### Recommended Sections
+When adding or updating a skill:
 
-| Section | Purpose |
-|---|---|
-| **Purpose** | One-paragraph goal statement |
-| **Core Philosophy** | Guiding principles for decisions within this skill |
-| **Checklist** | Categorized checks with success criteria |
-| **Common Anti-Patterns** | Known failure modes with fixes |
-| **Process** | Step-by-step instructions for the model |
-| **Output Format** | Expected structure of the model's response |
+1. Create or edit the skill under `skills/<skill-name>/`.
+2. Keep the skill focused, triggerable, and easy to follow in real usage.
+3. Register or update the entry in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json).
+4. Open a PR with the skill change and a short summary of intent.
 
-## Adding a Skill to the Marketplace
+## Skill Authoring SOP
 
-After creating your skill, register it in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) by adding an entry to the `plugins` array:
-
-```json
-{
-  "name": "your-skill-name",
-  "source": "./skills/your-skill-name",
-  "description": "...",
-  "version": "1.0.0",
-  "author": { "name": "your-name" },
-  "keywords": ["keyword1", "keyword2"]
-}
-```
+The previous README guidance has been moved to [docs/skill-authoring-sop.md](docs/skill-authoring-sop.md) so the repository homepage can stay lightweight.
 
 ## License
 
