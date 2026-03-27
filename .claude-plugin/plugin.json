@@ -1,0 +1,17 @@
+{
+  "name": "zegging-skills",
+  "description": "zegging's skills marketplace — a curated collection of Claude skills for code review, architecture analysis, and engineering best practices",
+  "version": "1.0.0",
+  "author": {
+    "name": "zegging"
+  },
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "marketplace",
+    "code-review",
+    "engineering",
+    "best-practices"
+  ],
+  "repository": "https://github.com/zegging/zegging-skills"
+}

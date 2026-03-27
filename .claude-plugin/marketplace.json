@@ -1,0 +1,12 @@
+{
+  "name": "zegging-skills",
+  "owner": {
+    "name": "zegging",
+    "email": ""
+  },
+  "metadata": {
+    "description": "zegging's skills marketplace — a curated collection of Claude skills",
+    "version": "1.0.0"
+  },
+  "plugins": []
+}
