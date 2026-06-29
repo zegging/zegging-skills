@@ -24,6 +24,25 @@
         "python",
         "api"
       ]
+    },
+    {
+      "name": "google-repo",
+      "source": "./skills/google-repo",
+      "description": "Coordinate development across multiple independent git repositories using Google's repo tool and a manifest, producing reproducible workspaces and version snapshots.",
+      "version": "1.0.0",
+      "author": {
+        "name": "zegging"
+      },
+      "keywords": [
+        "git",
+        "multi-repo",
+        "repo",
+        "manifest",
+        "aosp",
+        "version-control",
+        "monorepo-alternative",
+        "submodule-alternative"
+      ]
     }
   ]
 }

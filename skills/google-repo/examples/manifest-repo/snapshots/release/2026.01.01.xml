@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="origin"
+          fetch="https://git.example.com/" />
+
+  <default remote="origin"
+           sync-j="4" />
+
+  <project name="team-a/service-api"
+           path="service-api"
+           revision="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+
+  <project name="team-a/service-web"
+           path="service-web"
+           revision="bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" />
+
+  <project name="team-b/infra-gateway"
+           path="infra-gateway"
+           revision="cccccccccccccccccccccccccccccccccccccccc" />
+</manifest>
